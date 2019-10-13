@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Assignment1@p1-rasterizer-sutble</name>
+	<comment></comment>
+	<projects></projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.cdt.make.core.makeBuilder</name>
+			<triggers>clean,full,incremental,</triggers>
+			<arguments>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.cleanBuildTarget</key>
+					<value>clean</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.enableCleanBuild</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.append_environment</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.stopOnError</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.enabledIncrementalBuild</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.build.command</key>
+					<value>/usr/bin/make</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.contents</key>
+					<value>org.eclipse.cdt.make.core.activeConfigSettings</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.build.target.inc</key>
+					<value>all</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.build.arguments</key>
+					<value>-j4</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.buildLocation</key>
+					<value>/home/aditya/School/CS184/p1-rasterizer-sutble</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.useDefaultBuildCmd</key>
+					<value>false</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.environment</key>
+					<value>VERBOSE=1|CMAKE_NO_VERBOSE=1|</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.enableFullBuild</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.build.target.auto</key>
+					<value>all</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.enableAutoBuild</key>
+					<value>false</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.build.target.clean</key>
+					<value>clean</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.fullBuildTarget</key>
+					<value>all</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.buildArguments</key>
+					<value></value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.build.location</key>
+					<value>/home/aditya/School/CS184/p1-rasterizer-sutble</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.autoBuildTarget</key>
+					<value>all</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.core.errorOutputParser</key>
+					<value>org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser;</value>
+				</dictionary>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.cdt.make.core.ScannerConfigBuilder</name>
+			<arguments/>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.cdt.make.core.makeNature</nature>
+		<nature>org.eclipse.cdt.make.core.ScannerConfigNature</nature>
+		<nature>org.eclipse.cdt.core.ccnature</nature>
+		<nature>org.eclipse.cdt.core.cnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>[Subprojects]</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Subprojects]/CGL</name>
+			<type>2</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL</location>
+		</link>
+		<link>
+			<name>[Subprojects]/GLFW</name>
+			<type>2</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw</location>
+		</link>
+		<link>
+			<name>[Targets]</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glew</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glew/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glew/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glew/Source Files/glew.c</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glew/src/glew.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glew/Source Files/glewinfo.c</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glew/src/glewinfo.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glew/Source Files/visualinfo.c</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glew/src/visualinfo.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glew/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glew/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glew/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glew/Object Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glew/Object Libraries</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Source Files/context.c</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw/src/context.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Source Files/init.c</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw/src/init.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Source Files/input.c</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw/src/input.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Source Files/monitor.c</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw/src/monitor.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Source Files/window.c</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw/src/window.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Source Files/x11_init.c</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw/src/x11_init.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Source Files/x11_monitor.c</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw/src/x11_monitor.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Source Files/x11_window.c</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw/src/x11_window.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Source Files/xkb_unicode.c</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw/src/xkb_unicode.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Source Files/linux_joystick.c</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw/src/linux_joystick.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Source Files/posix_time.c</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw/src/posix_time.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Source Files/posix_tls.c</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw/src/posix_tls.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Source Files/glx_context.c</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw/src/glx_context.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Header Files/internal.h</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw/src/internal.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Header Files/glfw_config.h</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw/src/glfw_config.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Header Files/glfw3.h</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw/include/GLFW/glfw3.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Header Files/glfw3native.h</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw/include/GLFW/glfw3native.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Header Files/x11_platform.h</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw/src/x11_platform.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Header Files/xkb_unicode.h</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw/src/xkb_unicode.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Header Files/linux_joystick.h</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw/src/linux_joystick.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Header Files/posix_time.h</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw/src/posix_time.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Header Files/posix_tls.h</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw/src/posix_tls.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Header Files/glx_context.h</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/deps/glfw/src/glx_context.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Object Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] glfw/Object Libraries</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL/Source Files/vector2D.cpp</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/src/vector2D.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL/Source Files/vector3D.cpp</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/src/vector3D.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL/Source Files/vector4D.cpp</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/src/vector4D.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL/Source Files/matrix3x3.cpp</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/src/matrix3x3.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL/Source Files/matrix4x4.cpp</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/src/matrix4x4.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL/Source Files/quaternion.cpp</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/src/quaternion.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL/Source Files/complex.cpp</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/src/complex.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL/Source Files/color.cpp</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/src/color.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL/Source Files/spectrum.cpp</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/src/spectrum.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL/Source Files/osdtext.cpp</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/src/osdtext.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL/Source Files/osdfont.cpp</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/src/osdfont.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL/Source Files/viewer.cpp</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/src/viewer.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL/Source Files/base64.cpp</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/src/base64.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL/Source Files/lodepng.cpp</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/src/lodepng.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL/Source Files/tinyxml2.cpp</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/src/tinyxml2.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL/Source Files/path.cpp</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/CGL/src/path.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL/Object Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] CGL/Object Libraries</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] draw</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] draw/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] draw/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] draw/Source Files/texture.cpp</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/src/texture.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] draw/Source Files/triangulation.cpp</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/src/triangulation.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] draw/Source Files/svgparser.cpp</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/src/svgparser.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] draw/Source Files/transforms.cpp</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/src/transforms.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] draw/Source Files/drawrend.cpp</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/src/drawrend.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] draw/Source Files/svg.cpp</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/src/svg.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] draw/Source Files/main.cpp</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/src/main.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] draw/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] draw/Header Files/drawrend.h</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/src/drawrend.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] draw/Header Files/svg.h</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/src/svg.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] draw/Header Files/svgparser.h</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/src/svgparser.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] draw/Header Files/texture.h</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/src/texture.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] draw/Header Files/transforms.h</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/src/transforms.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] draw/Header Files/triangulation.h</name>
+			<type>1</type>
+			<location>/home/aditya/School/CS184/p1-rasterizer-sutble/src/triangulation.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] draw/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] draw/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] draw/Object Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] draw/Object Libraries</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>

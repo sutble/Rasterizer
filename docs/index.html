@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<style>
+  body {
+    padding: 100px;
+    width: 1000px;
+    margin: auto;
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    color: #121212;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+</style>
+<title>CS 184 Rasterizer</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+</head>
+
+
+<body>
+
+<h1 align="middle">CS 184: Computer Graphics and Imaging, Spring 2019</h1>
+<h1 align="middle">Project 1: Rasterizer</h1>
+<h2 align="middle">Aditya Garg</h2>
+
+<br><br>
+
+<div>
+
+<h2 align="middle">Overview</h2>
+<p>Give a high-level overview of what you implemented in this project. Think about what you've built as a whole. Share your thoughts on what interesting things you've learned from completing the project.
+</p>
+
+<p>I built a renderer for images. It can take in an image file and display them at different sample rates etc. Moreover, it can perform transforms and utilize barycentric coordinates.  I knew beforehand that svg files were images that could scale, but I never really understood how they worked until this project.
+</p>
+
+<h2 align="middle">Section I: Rasterization</h2>
+
+<h3 align="middle">Part 1: Rasterizing single-color triangles</h3>
+
+
+<p>Walk through how you rasterize triangles in your own words.
+</p>
+
+
+<p> Given 3 coordinates of a triangle first create the bounding box. This is done by finding the minimum and maximum x values and the minimum and maximum y values. This is the basis for the double for loop to iterate samples. Next create 3 line segments T0, T1, T2 based on the coordinates given. I statically create them as x1-x0, x2-x1, and x0-x2. Find the perpendicular portions of these and label them N0, N1, and N2. Now for each sample in the bounding box (the double for loop) create vectors V0, V1, and V2. Take the dot product of these with the corresponding N values. These are called L values. If all L values are positive or all L values are negative, we need to rasterize the point (which is an included function).  
+</p>
+
+<p>Explain how your algorithm is no worse than one that checks each sample within the bounding box of the triangle.
+</p>
+
+
+<p> My double for loop only iterates samples from the creation of the bounding box of the triangle, so my algorithm meets this requirement.
+ 
+</p>
+
+<p>Show a png screenshot of basic/test4.svg with the default viewing parameters and with the pixel inspector centered on an interesting part of the scene.
+</p>
+
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="../writeup/p1/p1.png" align="middle" width="400px"/>
+        <figcaption align="middle"></figcaption>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+
+<h3 align="middle">Part 2: Antialiasing triangles</h3>
+
+<p>Walk through how you implemented supersampling. Why is supersampling useful? What modifications did you make to the rasterization pipeline in the process? Explain how you used supersampling to antialias your triangles.
+</p>
+
+
+<p>
+In drawrend.cpp there is a variable sample rate which is either 1,4,9, or 16. 
+So to include supersampling, I had to change cx and cy from
+Cx = x + .5
+Cy = y + .5 
+to a more dynamic solution that found the center of the subpixels depending on the sample rate. For sample_rate = 1, it needed to be .5. For sample_rate=4 and beyond, this number would change. To do this we have to change 0.5 to a more appropriate fraction. Frac = num/den. It is important to realize that den = 2 * sqrt(sample_rate) and the num is the various odd numbers 1,3,5. So we just need a double for loop through numx and numy and add in the appropriate fractions to each cx and cy. Later, get_pixel_color just averages out all of these subpixel values. Since most of the subpixel values on the edges will now not be in the triangle, the averaged value will result in a color shade that is desaturated.
+Supersampling is useful because it can remove the jaggies of a triangle, making it appear sharper. I had to modify the pipeline by changing how the triangles were rasterized. This was done by taking into account the sampling rate, which determined the total number of samples that needed to be taken in a pixel. 
+</p>
+
+<p>Show png screenshots of basic/test4.svg with the default viewing parameters and sample rates 1, 4, and 16 to compare them side-by-side. Position the pixel inspector over an area that showcases the effect dramatically; for example, a very skinny triangle corner. Explain why these results are observed.
+</p>
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="../writeup/p2/1.png" align="middle" width="400px"/>
+        <figcaption align="middle"></figcaption>
+      </td>
+       <td>
+        <img src="../writeup/p2/2.png" align="middle" width="400px"/>
+        <figcaption align="middle"></figcaption>
+      </td>
+       <td>
+        <img src="../writeup/p2/3.png" align="middle" width="400px"/>
+        <figcaption align="middle"></figcaption>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+<p> As explained above, at higher sampling rates, the most of the samples of edge pixels are white, which results in the overall average value of the pixel being lighter. This takes the form of a desaturated color which leads to a decline in the staircase effect. 
+</p>
+
+
+<h3 align="middle">Part 3: Transforms</h3>
+
+<p>Create an updated version of svg/transforms/robot.svg with cubeman doing something more interesting, like waving or running. Feel free to change his colors or proportions to suit your creativity. Save your svg file as my_robot.svg in your docs/ directory and show a png screenshot of your rendered drawing in your write-up. Explain what you were trying to do with cubeman in words.
+</p>
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="../writeup/p3/1.png" align="middle" width="400px"/>
+        <figcaption align="middle"></figcaption>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<p>
+  Cubeman is dancing!!
+</p>
+
+
+
+<h2 align="middle">Section II: Sampling</h2>
+
+<h3 align="middle">Part 4: Barycentric coordinates</h3>
+
+<h2 align="middle">Overview</h2>
+<p>Explain barycentric coordinates in your own words and use an image to aid you in your explanation. 
+</p>
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="../writeup/p4/barycentric.jpg" align="middle" width="400px"/>
+        <figcaption align="middle"></figcaption>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<p>Barycentric coordinates are essentially a form of linearly interpolating in 2d (or more) space. This takes the form of taking a linear combination of 3 distinct points. The weighting of these three points are determined by the distance between the point and one of the lines enclosing it. 
+</p>
+
+<p>Show a png screenshot of svg/basic/test7.svg with default viewing parameters and sample rate 1. If you make any additional images with color gradients, include them.
+</p>
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="../writeup/p4/1.png" align="middle" width="400px"/>
+        <figcaption align="middle"></figcaption>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+<h3 align="middle">Part 5: "Pixel sampling" for texture mapping</h3>
+
+
+<h3 align="middle">Part 6: "Level sampling" with mipmaps for texture mapping</h3>
+
+
+
+<h2 align="middle">Section III: Art Competition</h2>
+<p>If you are not participating in the optional art competition, don't worry about this section!</p>
+
+<h3 align="middle">Part 7: Draw something interesting!</h3>
+
+</body>
+</html>
